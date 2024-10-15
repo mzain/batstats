@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rankings | BatStats</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Team Rankings</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="history.html">Team History</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Rankings By Date and Type</h2>
+      <label for="type-select">Select Type:</label>
+      <select id="type-select">
+        <option value="BT">BT</option>
+        <option value="FC">FC</option>
+        <option value="BT20">BT20</option>
+      </select>
+
+      <label for="country-select">Select Country:</label>
+      <select id="country-select">
+        <option value="global">Global</option>
+        <option value="country1">Country 1</option>
+        <option value="country2">Country 2</option>
+        <!-- Add more countries as needed -->
+      </select>
+
+      <label for="date-select">Select Date:</label>
+      <input type="date" id="date-select">
+
+      <button onclick="fetchRankings()">Show Rankings</button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Team Name</th>
+            <th>BatStats</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody id="ranking-table">
+          <!-- Rankings will be populated here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
